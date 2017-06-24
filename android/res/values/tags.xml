@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="categories">categories</string>
+    <string name="index">index</string>
+    <string name="category">category</string>
+    <string name="THEME">theme</string>
+    <string name="TITLE_NAME">title</string>
+    <string name="MY_AD_UNIT_ID">PublisherID</string>
+
+</resources>

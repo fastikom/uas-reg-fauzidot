@@ -1,0 +1,42 @@
+<resources>
+
+    <color name="text_background">#cc999999</color>
+    <color name="text_color">#ffffff</color>
+
+    <!-- THEME1 -->
+    <color name="t1_title_text_color">#58585a</color>
+    <color name="t1_title_backgroud_color">#e7e8e9</color>
+    <color name="t1_line_color">#85bc3c</color>
+    <color name="t1_grid_backgroud">#ffffff</color>
+    <color name="t1_text_background">#cceeeeee</color>
+    <color name="t1_selector">#8885bc3c</color>
+
+    <!-- THEME2 -->
+    <color name="t2_title_text_color">#ffffff</color>
+    <color name="t2_title_backgroud_color">#9f1f63</color>
+    <color name="t2_line_color">#f3f3f4</color>
+    <color name="t2_grid_backgroud">#9f1f63</color>
+    <color name="t2_text_background">#999f1f63</color>
+    <!-- THEME3 -->
+    <color name="t3_title_text_color">#ffffff</color>
+    <color name="t3_title_backgroud_color">#0f75bc</color>
+    <color name="t3_line_color">#f3f3f4</color>
+    <color name="t3_grid_backgroud">#ffffff</color>
+    <color name="t3_text_background">#990f75bc</color>
+    <color name="t3_fullscreen_text_background">#ddffffff</color>
+    <color name="t3_fullscreen_title_text_color">#0f75bc</color>
+
+    <drawable name="t1_title_backgroud_color">#85bc3c</drawable>
+    <drawable name="t1_title_backgroud_color_selected">#A0D45B</drawable>
+    <drawable name="t2_title_backgroud_color">#9f1f63</drawable>
+    <drawable name="t2_title_backgroud_color_selected">#9E4A77</drawable>
+    <drawable name="t3_title_backgroud_color">#0f75bc</drawable>
+    <drawable name="t3_title_backgroud_color_selected">#378FCC</drawable>
+    <drawable name="t1_text_background">#cceeeeee</drawable>
+    <drawable name="t1_text_background_selected">#ccaaaaaa</drawable>
+    <drawable name="t2_text_background">#999f1f63</drawable>
+    <drawable name="t2_text_background_selected">#99802153</drawable>
+    <drawable name="t3_fullscreen_text_background">#ddffffff</drawable>
+    <drawable name="t3_fullscreen_text_background_selected">#dddddddd</drawable>
+
+</resources>

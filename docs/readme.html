@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Template Documentation Template</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Gallery Module&rdquo; Documentation by &ldquo;CreativeForm&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Gallery Module&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 21/01/2014<br>
+					By: CreativeForm<br>
+					Email: <a href="mailto:dev@csform.com">dev@csform.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my code. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/CreativeForm" target="blank">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#setupEclipse">Setup Eclipse ADT</a></li>
+			<li><a href="#importProject">Import project</a></li>
+			<li><a href="#usage">Usage</a></li>
+			<li><a href="#splashScreen">Splash Screen Options</a></li>
+			<li><a href="#adMobSetup">AdMob setup</a></li>
+			<li><a href="#analytics">Change Analytics Tracking ID</a></li>
+			<li><a href="#notice">Important notice</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="setupEclipse"><strong>Setup Eclipse ADT</strong> - <a href="#toc">top</a></h3>
+		<p>If you haven't downloaded Eclipse ADT yet, you can download it <a href="http://developer.android.com/sdk/index.html" target="blank">here</a>. Click Download the SDK ADT Bundle for XXXX. XXXX should be the operating system you are using automaticaly recognised by the site.</p>
+		
+		<p>For Windows users, you may look to <a href="http://www.youtube.com/watch?v=_RNNgo79d2s" target="blank">this video</a> on how to install and set-up Eclipse ADT.</p>
+		
+		<p>For Ubuntu users, you may look to <a href="http://www.youtube.com/watch?v=c9_Nhmeks0U" target="blank">this video</a> on how to install and set-up Eclipse ADT.</p>
+		
+		<p>For Linux Mint users, you may look to <a href="http://www.youtube.com/watch?v=unF0alwZPGA" target="blank">this video</a> on how to install and set-up Eclipse ADT.</p>
+		
+		<p>For Mac OS X users, you may look to <a href="http://www.youtube.com/watch?v=ajQ2-K1yeH8" target="blank">this video</a> on how to install and set-up Eclipse ADT.</p>
+		
+		<hr>
+		
+		<h3 id="importProject"><strong>Import project</strong> - <a href="#toc">top</a></h3>
+		<p>After downloading packed file, unzip it. You may <a href="http://www.youtube.com/watch?v=NOoQsB9M8Wo" target="blank">follow our video</a> instructions or follow these:</p>
+		
+		<p>Open Eclipse, click File -> Import... Under Android folder, choose Existing Android Code Into Workspace and click Next. Browse for unzipped folder and choose android folder. Click OK, then click Finish. Before clicking Finish, you may rename project name by clicking SampleAPP under New Project Name tab.</p>
+		
+		<p>If you use our product in your project, you should import it as library.</p>
+		
+		<p>In Eclipse, under Package Explorer view, right click your project. Click Properties (should be at the bottom of the right click context). Open Android tab. Under Library box, click Add. Choose our project (if you haven't change project name, should be listed as SampleApp) and click ok.</p>
+		
+		<hr>
+
+		<h3 id="usage"><strong>Usage</strong> - <a href="#toc">top</a></h3>
+
+		<p>After import, you may look to the <pre>com.csform.onlinegallery.sample.SampleAPP.java</pre> code and see how to use this gallery.</p>
+		
+		<p>You may also run application. Click Run -> Run as -> Android application. Choose connected device or start an emulator.</p>
+
+		<p>Here are detailed instructions:</p>  
+
+	<ol>
+			<li>In your activity, create ArrayList of CategoryItem(CategoryItem implements interface Category).
+<pre>ArrayList<CategoryItem> categories = new ArrayList<CategoryItem>();</pre></li>
+			<li>Create as many categories as you need.
+<pre>CategoryItem category = new CategoryItem();
+category.setName("CATEGORY 1"); //title of category
+category.setResIcon(R.drawable.category1);
+//icon of category, if there isn't resID (resID=0) category icon is first picture from list of images.</pre></li>
+			<li>Create List of ImageItem(ImageItem implements interface Image)
+<pre>ArrayList<ImageItem> images = new ArrayList<ImageItem>();</pre></li>
+			<li>Populate images:
+<pre>ImageItem image1 = new ImageItem();
+image1.setName("Image1");   //title of image
+image1.setPath("http://example.com/image1.jpg"); // path to image, from url or  sdcard uri
+image1.setThumbPath("http://example.com/thumbs/image1.jpg); //path to thumb, if path==null full image is used for thumb</pre></li>
+			<li>Add image1 to images
+<pre>images.add(image1);</pre></li>
+			<li>Add images to category
+<pre>category.add(images);</pre></li>
+			<li>Add category to categories
+<pre>categories.add(category);</pre></li>
+			<li>Choose theme (from Themes.java). Themes.THEME1, Themes.THEME2 or Themes.THEME3 are predefined themes and can be used to determine which theme you would like to use. Pick the one you like.</li>
+			<li>From your activity, pass categories, title and theme to CategoryGridActivity and start it
+<pre>Intent intent = new Intent(this,CategoryGridActivity.class);
+intent.putParcelableArrayListExtra(getString(R.string.categories),categories);
+intent.putExtra(getString(R.string.THEME),Themes.THEME1);   //set THEME1, THEME2 or THEME3
+intent.putExtra(getString(R.string.TITLE_NAME),"TITLE 1");     //header title
+startActivity(intent);</pre>
+</li>
+		</ol>
+		
+		<hr>
+
+		<h3 id="splashScreen"><strong>Splash Screen Options</strong> - <a href="#toc">top</a></h3>
+
+		<p>Splash screen is set in GalleryCategoryActivity.java file. You can disable it by commenting this line of code, like this (about line 61):</p>
+		<code>
+			//showSplashScreen();
+		</code>
+		<p>To change duration of splash screen, edit this line of code (about line 44):</p>
+		<code>
+			private static final long SPLASH_SCREEN_TIMEOUT_MILLIS = 2000;
+		</code>
+		<p>to whatever you want. 2000 means 2000 milliseconds, or 2 seconds.</p>
+		
+		<hr>
+
+		<h3 id="whatYouCanChange"><strong>What you can change</strong> - <a href="#toc">top</a></h3>
+
+		<p>You can change number of items to be shown in the thumbnail previews. Open Themes.java file and define which of the following you would like to change:</p>
+		<pre>CATEGORY_NUMBER_OF_COLUMNS = {1,2,1};</pre>
+		<pre>THUMB_NUMBER_OF_COLUMNS = {2,1,2};</pre>
+		</pre>
+		<p>CATEGORY_NUMBER_OF_COLUMNS defines number of columns in category preview, THUMB_NUMBER_OF_COLUMNS defines number of columns in thumbnail preview (images under certain category). These numbers are order by the theme ordering, respectively. So, as from previous code, for CATEGORY_NUMBER_OF_COLUMNS, first number, 1, means category preview in THEME1 should contain 1 column, second number, 2, means category preview in THEME2 should contain 2 columns, and third number, 1, means category preview in THEME3 should contain 1 column.</p>
+		<p>This also applies for THUMB_NUMBER_OF_COLUMNS (in thumbnail preview, THEME1 has 2 columns, THEME2 has 1 column and THEME3 has 2 columns).</p>
+		
+		<hr>
+
+		<h3 id="adMobSetup"><strong>AdMob setup</strong> - <a href="#toc">top</a></h3>
+
+		<p>To make your ads work, you just have to provide your Publisher ID taken from <a href="http://www.admob.com" target="_blank">here</a>. If you have't registered yet, you can find tutorial how to do it <a href="http://www.youtube.com/watch?v=0dGeTGQz4_s" target="_blank">here</a>. After you register, create new site <a href="http://www.admob.com/my_sites/create_site" target="_blank">here</a>. Then you should find your newly created Publisher ID at top of the newxt page. Copy it.</p>
+		<p>Then, in Eclipse, open res folder, open values folder and open tags.xml file. Change <code>PublisherID</code> with your copied PublisherID.</p>
+		
+		<hr>
+
+		<h3 id="analytics"><strong>Change Analytics Tracking ID</strong> - <a href="#toc">top</a></h3>
+
+		<p>Log in with your Google account <a href="https://www.google.com/analytics/">here</a>. In the Account column, select the account from the dropdown that you want to add the property to. If you have a lot of accounts, use the search box to help you find the right one. In the dropdown in the Property column, click Create new property. Select Mobile app and fill the rest of fields.</p>
+		
+		<p>After submiting, copy your tracking ID that is next to name of your newly created site. It should look like with UA-XXXX-Y. Copy it, open Eclipse, find res folder, find values folder and open analytics.xml and paste instead of UA-XXXX-Y.</p>
+		
+		<hr>
+
+		<h3 id="notice"><strong>Important notice</strong> - <a href="#toc">top</a></h3>
+
+		<p>If your images are on a public Internet address, don't foget to add permissions to AndroidManifest.xml file.</p>
+		<pre>android.permission.INTERNET</pre>
+		<p>Save file.</p>
+		
+		<p>In order to &ldquo;Set wallpeper&rdquo; option works, you should add this permission:</p>
+		<pre>android.permission.SET_WALLPAPER</pre>
+		
+		<p>To add permision, open AndroidManifest.xml file, click Permissions tab (in the bottom of the screen) and click add. Double click Uses Permission. Find and paste or copy and paste prevous formatted codes.</p>
+		
+		<p>This app uses <a href="https://github.com/nostra13/Android-Universal-Image-Loader" target="blank">UIL (Universal Image Loader) library</a> from Git-Hub under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="blank">Apache 2.0 licence</a>. You may find their documentation on how to provide URIs for ImageViews to display images. Here is a quick preview:</p>
+		
+		<ol class="alpha">
+			<li><pre>String imageUri = "http://site.com/image.png"; // from Web</pre></li>
+			<li><pre>String imageUri = "file:///mnt/sdcard/image.png"; // from SD card</pre></li>
+			<li><pre>String imageUri = "content://media/external/audio/albumart/13"; // from content provider</pre></li>
+			<li><pre>String imageUri = "assets://image.png"; // from assets</pre></li>
+			<li><pre>String imageUri = "drawable://" + R.drawable.image; // from drawables (only images, non-9patch)</pre></li>
+		</ol>
+		
+		<p>This app also uses <a href="https://github.com/chrisbanes/PhotoView" target="blank">PhotoView library</a> from Git-Hub under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="blank">Apache 2.0 licence</a>.</p>
+		
+		<p>After adding permissions, you should declare Activites in AndroidManifest.xml file. This is a list of activites used in this library:</p>
+		<pre>com.csform.onlinegallery.GalleryCategoryActivity</pre>
+		<pre>com.csform.onlinegallery.GalleryThumbActivity</pre>
+		<pre>com.csform.onlinegallery.FullScreenGalleryActivity</pre>
+		
+		<p>To declare Activity, open AndroidManifest.xml , click Application tab and click Add under Applications Node tab. Double click Activity. There should be now Attributes for Activity tab, next to Applications Node where you should copy previous formatted codes.</p>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>CreativeForm</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

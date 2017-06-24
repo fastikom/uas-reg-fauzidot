@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent" >
+
+    <com.csform.onlinegallery.views.PhotoPager
+        android:id="@+id/photo_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_alignParentBottom="true" >
+
+        <TextView
+            android:id="@+id/image_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/buttons"
+            android:background="@color/t3_fullscreen_text_background"
+            android:gravity="center_vertical|left"
+            android:paddingBottom="5dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="5dp"
+            android:text="hello"
+            android:textColor="@color/t3_fullscreen_title_text_color"
+            android:textSize="18sp" >
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+            <ImageView
+                android:id="@+id/wallpaper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/t3_gallery_button_selector"
+                android:src="@drawable/t3_wallpaper" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+            <ImageView
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/t3_gallery_button_selector"
+                android:src="@drawable/t3_download" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/t3_gallery_button_selector"
+                android:src="@drawable/t3_share" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
